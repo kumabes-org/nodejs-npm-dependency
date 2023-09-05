@@ -1,0 +1,23 @@
+name: "1 - Feature"
+
+on:
+  push:
+    branches:
+      - feature**
+
+jobs:
+  build:
+    name: "Build"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: |
+          echo "build"
+
+  test:
+    name: "Test"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: |
+          echo "test"    
